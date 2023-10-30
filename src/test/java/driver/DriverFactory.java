@@ -4,6 +4,10 @@ import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
@@ -16,10 +20,9 @@ public static WebDriver getDriver(){
     if (driver.get() == null){
         driver.set(createDriver());
     }
+
     return driver.get();
 }
-
-
 
 private static WebDriver createDriver(){
   WebDriver  driver= null;
@@ -38,13 +41,14 @@ private static WebDriver createDriver(){
            // driver.manage().window().maximize();
             break;
         }
-        case "firefox": {
+        case "edge": {
 
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/java/drivers/chromedriver");
-            ChromeOptions chromeOptions= new ChromeOptions();
-            chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-            driver= new ChromeDriver(chromeOptions);
-            driver.manage().window().maximize();
+            System.setProperty("webdriver.edge.driver", "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge");
+            EdgeOptions edgeOptions= new EdgeOptions();
+            edgeOptions.addArguments("");
+            edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+            driver= new EdgeDriver(edgeOptions);
+            //driver.manage().window().maximize();
             break;
         }
     }

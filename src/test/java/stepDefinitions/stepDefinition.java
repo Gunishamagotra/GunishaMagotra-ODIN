@@ -4,8 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import pageObject.Base_PO;
-import pageObject.Login_PO;
+import pageObject.*;
 
 
 public class stepDefinition extends Base_PO {
@@ -17,6 +16,10 @@ public class stepDefinition extends Base_PO {
         this.login_po= login_po;
 
     }
+
+    HomePage_PO homePage_po = new HomePage_PO();
+    BookingInfoPage bookingInfoPage = new BookingInfoPage();
+    DeparturesAndBookingPage departuresAndBookingPage = new DeparturesAndBookingPage();
 
 
 
@@ -37,8 +40,38 @@ public class stepDefinition extends Base_PO {
 
     @Given("User is able to Login successfully")
     public void userIsAbleToLoginSuccessfully() {
+    login_po.navigateToLoginPage();
+    login_po.setClickLoginButton();
+    login_po.ClickMembers();
+    login_po.enterUserName();
+    login_po.clickNextButton();
+    login_po.enterPassword();
+    login_po.clickNextButton();
+    login_po.clickNextButton();
+    login_po.verifyHomePage();
 
-        Login_PO loginPo = new Login_PO();
-       loginPo.navigateToLoginPage();
-     loginPo.setClickLoginButton();    }
+    }
+    @When("User creates a new booking")
+    public void user_creates_a_new_booking() throws InterruptedException {
+        homePage_po.clickTourManagement();
+        departuresAndBookingPage.setDepartureAndBooking();
+        departuresAndBookingPage.selectDateFromCalender();
+        departuresAndBookingPage.addBooking();
+        bookingInfoPage.fillUpAndSaveUserInfo();
+    }
+    @Then("booking should be created successfully")
+    public void booking_should_be_created_successfully() throws InterruptedException {
+        Thread.sleep(5000);
+        departuresAndBookingPage.setDepartureAndBooking();
+        departuresAndBookingPage.selectNewDate();
+      //  departuresAndBookingPage.addBooking();
+        departuresAndBookingPage.verifyBooking();
+
+
+
+
+
+    }
+
+
 }
