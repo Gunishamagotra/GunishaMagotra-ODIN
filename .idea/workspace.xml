@@ -4,19 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8165012-4a75-4d01-bd5e-d75f44f54e29" name="Changes" comment="creating project">
-      <change afterPath="$PROJECT_DIR$/src/main/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/driver/.ipconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/driver/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/driver/drivers/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/Base_PO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pageObject/Login_PO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runner/runner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/stepDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Create a booking for 2 people with status &amp;#39;Invoice paid&amp;#39; for the Bunratty Castle tour for 3rd Dec 2023.feature" afterDir="false" />
+    <list default="true" id="f8165012-4a75-4d01-bd5e-d75f44f54e29" name="Changes" comment="updating code">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/features/Create a booking for 4 people for the Cliffs of Moher tour on 4th Dec 2023.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Hooks/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/driver/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/driver/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/Base_PO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/Base_PO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/BookingInfoPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/BookingInfoPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/DeparturesAndBookingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/DeparturesAndBookingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/HomePage_PO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/HomePage_PO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObject/Login_PO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObject/Login_PO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runner/runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runner/runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/stepDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/stepDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/Create a booking for 2 people with status &amp;#39;Invoice paid&amp;#39; for the Bunratty Castle tour for 3rd Dec 2023.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +36,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -134,7 +139,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698577252948</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="creating project">
+      <option name="closed" value="true" />
+      <created>1698608618839</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698608618839</updated>
+    </task>
+    <task id="LOCAL-00004" summary="updating code">
+      <option name="closed" value="true" />
+      <created>1698704541316</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698704541316</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,7 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="creating project" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating project" />
+    <MESSAGE value="updating code" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -159,6 +181,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>15</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageObject/HomePage_PO.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/pageObject/BookingInfoPage.java</url>
+          <line>68</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -21,7 +21,7 @@ public class HomePage_PO extends Base_PO {
 
     public void clickTourManagement() {
         try {
-            Thread.sleep(1000);
+            tinyWait();
             wait.until(ExpectedConditions.elementToBeClickable(TourManagement)).click();
         } catch (Exception e){
             e.printStackTrace();

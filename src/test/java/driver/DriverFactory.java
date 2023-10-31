@@ -78,8 +78,8 @@ public static String getBrowserType() {
 
 public static void tearDownBrowser()
     {
-        driver.get().quit();
-        driver.remove();
+        getDriver().quit();
+
     }
 
 

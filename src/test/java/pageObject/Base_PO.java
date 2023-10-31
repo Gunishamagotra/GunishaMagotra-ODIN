@@ -14,7 +14,7 @@ import java.util.Random;
 
 public class Base_PO {
 
-    //WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+    WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
     public Base_PO(){
         PageFactory.initElements(getDriver(), this);
@@ -30,37 +30,43 @@ public class Base_PO {
     }
 
     public void sendKeys(By by, String textToType){
-        WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(by)).sendKeys(textToType);
     }
 
     public void sendKeys(WebElement element, String textToType){
-        WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(element)).sendKeys(textToType);
 
     }
     public void click(By by)
     {
-        WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(by)).click();
     }
     public void click(WebElement element)
     {
-       WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(20));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
     public void verifyAlertMessage(String message){
-        WebDriverWait wait= new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
         String alertMessage= getDriver().switchTo().alert().getText();
         Assert.assertEquals(alertMessage, message);
+    }
 
+    public void tinyWait() throws InterruptedException {
+        Thread.sleep(2000);
+    }
+
+    public void longWait() throws InterruptedException {
+        Thread.sleep(5000);
     }
 
     public int generateRandomNumber(int min, int max) {
         Random random = new Random();
         return random.nextInt(max - min) + min;
+    }
+
+    public void quitDriver(){
+        getDriver().quit();
     }
 
 }

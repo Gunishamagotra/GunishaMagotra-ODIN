@@ -31,12 +31,6 @@ public class Login_PO extends Base_PO {
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
 
-//    private @FindBy
-
-//    private @FindBy(id= "login-button")
-//    WebElement clickLoginButton;
-
-
     public Login_PO() {
         super();
     }

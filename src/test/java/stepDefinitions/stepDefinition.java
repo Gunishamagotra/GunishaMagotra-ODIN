@@ -49,27 +49,20 @@ public class stepDefinition extends Base_PO {
     login_po.clickNextButton();
     login_po.clickNextButton();
     login_po.verifyHomePage();
-
     }
     @When("User creates a new booking")
     public void user_creates_a_new_booking() throws InterruptedException {
         homePage_po.clickTourManagement();
         departuresAndBookingPage.setDepartureAndBooking();
         departuresAndBookingPage.selectDateFromCalender();
-        departuresAndBookingPage.addBooking();
+        departuresAndBookingPage.addBooking(1,12);
         bookingInfoPage.fillUpAndSaveUserInfo();
     }
     @Then("booking should be created successfully")
     public void booking_should_be_created_successfully() throws InterruptedException {
-        Thread.sleep(5000);
         departuresAndBookingPage.setDepartureAndBooking();
         departuresAndBookingPage.selectNewDate();
-      //  departuresAndBookingPage.addBooking();
-        departuresAndBookingPage.verifyBooking();
-
-
-
-
+        departuresAndBookingPage.verifyBooking(1,2);
 
     }
 

@@ -22,20 +22,11 @@ public class Hooks {
 
     }
     @After
-    public void captureExceptionImage(Scenario scenario){
-        if (scenario.isFailed()){
-            Timestamp timestamp= new Timestamp(System.currentTimeMillis());
-            String time= String.valueOf(timestamp.getTime());
-
-            byte[] screenshot= ((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot,"image/png",time);
-
-        }
-    }
-    @After
     public void teardown()
     {
         tearDownBrowser();
     }
+
+
 
 }

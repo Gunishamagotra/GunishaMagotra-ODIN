@@ -47,27 +47,29 @@ public class BookingInfoPage extends Base_PO{
 
     WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(20));
 
+    static String BookingID;
+
     public void fillUpAndSaveUserInfo(){
         try {
             sendKeys(firstName, "Guns"+generateRandomNumber(1,10));
             sendKeys(lastName, "gg"+generateRandomNumber(1,10));
             sendKeys(phone, "0873521611"+ generateRandomNumber(1,5));
             sendKeys(email, "test" + generateRandomNumber(1,5)+"@gmail.com");
-            //wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='mat-input-7']"))).clear();
-            //  numberOfPassengers.clear();
-            sendKeys(numberOfPassengers, "2");
-            //  click(dropdown);
+            sendKeys(numberOfPassengers, "4");
             click(dropdown1);
             click(selectOrigin);
             click(selectInvoice);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[contains(text(),'Already invoiced')]"))).click();
-            Thread.sleep(5000);
+            longWait();
             click(saveBooking);
             click(saveBooking);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='mat-dialog-0']/cmt-create-booking-modal-form/mat-dialog-actions/button[1]/span[1]/cmt-button-loading-indicator/div"))).click();
+            longWait();
+            String ID = getDriver().findElement(By.xpath("//span[contains(text(),'Booking: Ref:')]")).getText();
+            BookingID=ID.substring(14,20);//returns va
+
         } catch(Exception e){
             e.printStackTrace();
         }
-        // click(saveInfo);
     }
 }
