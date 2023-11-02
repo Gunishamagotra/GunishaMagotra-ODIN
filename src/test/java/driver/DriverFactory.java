@@ -32,13 +32,13 @@ private static WebDriver createDriver(){
     switch (getBrowserType()){
         case "chrome": {
 
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/java/driver/drivers/chromedriver");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/java/driver/drivers/chromedriver.exe");
             ChromeOptions chromeOptions= new ChromeOptions();
            chromeOptions.addArguments("--remote-allow-origins=*");
 
             chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
             driver= new ChromeDriver(chromeOptions);
-           // driver.manage().window().maximize();
+            driver.manage().window().maximize();
             break;
         }
         case "edge": {
